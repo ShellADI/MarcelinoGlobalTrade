@@ -8,11 +8,11 @@ export const translations = {
     "nav.contact": "Contact Us",
     
     // Home page
-    "home.title": "Blessed Threads Emporium",
-    "home.subtitle": "Sacred Items for Faithful Living",
+    "home.title": "Marcelino Emporium",
+    "home.subtitle": "Crafting Devotion Empowering Lives",
     "home.featured": "Featured Products",
     "home.welcome": "Welcome to our sacred collection",
-    "home.description": "Discover our carefully curated selection of religious items designed to enrich your spiritual journey. From rosaries to icons, we offer high-quality products that honor faith traditions.",
+    "home.description": "Discover our carefully curated selection of religious items designed to enrich your spiritual journey. From rosaries to icons, we offer high-quality products that honor faith traditions. We proudly serve churches, religious institutions, retailers, and individuals across India, offering products rooted in reverence and made with dignity.",
     "home.shop": "Shop Now",
     
     // Products
@@ -62,11 +62,11 @@ export const translations = {
     "nav.contact": "Contacto",
     
     // Home page
-    "home.title": "Emporio de Hilos Benditos",
-    "home.subtitle": "Artículos Sagrados para una Vida Fiel",
+    "home.title": "Emporio Marcelino",
+    "home.subtitle": "Creando devoción, empoderando vidas",
     "home.featured": "Productos Destacados",
     "home.welcome": "Bienvenido a nuestra colección sagrada",
-    "home.description": "Descubra nuestra cuidadosa selección de artículos religiosos diseñados para enriquecer su camino espiritual. Desde rosarios hasta íconos, ofrecemos productos de alta calidad que honran las tradiciones de fe.",
+    "home.description": "Descubra nuestra cuidada selección de artículos religiosos, diseñados para enriquecer su camino espiritual. Desde rosarios hasta íconos, ofrecemos productos de alta calidad que honran las tradiciones religiosas. Nos enorgullece servir a iglesias, instituciones religiosas, comercios y particulares de toda la India, ofreciendo productos inspirados en la reverencia y elaborados con dignidad.",
     "home.shop": "Comprar Ahora",
     
     // Products
@@ -116,11 +116,11 @@ export const translations = {
     "nav.contact": "Contactus",
     
     // Home page
-    "home.title": "Emporium Filorum Benedictorum",
-    "home.subtitle": "Res Sacrae pro Vita Fideli",
+    "home.title": "Emporium Marcellini",
+    "home.subtitle": "Devotionem Fabricando Vitas Potentes Reddens",
     "home.featured": "Merces Insignes",
     "home.welcome": "Salve ad nostram collectionem sacram",
-    "home.description": "Invenire nostrum delectum rerum religiosarum ad ditandum iter spirituale tuum. A rosariis ad iconas, offerimus merces optimae qualitatis quae honorant traditiones fidei.",
+    "home.description": "Detege nostram diligenter selectam selectionem rerum religiosarum ad iter tuum spirituale locupletandum destinatarum. A rosariis ad icones, offerimus res summae qualitatis quae traditiones fidei honorant. Superbe ecclesiis, institutionibus religiosis, venditoribus, et individuis per Indiam servimus, offerentes res in reverentia radicatas et cum dignitate factas.",
     "home.shop": "Eme Nunc",
     
     // Products

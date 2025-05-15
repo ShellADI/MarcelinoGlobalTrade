@@ -20,7 +20,7 @@ const AboutPage = () => {
             <div className="space-y-4 p-6 bg-card rounded-lg shadow-sm">
               <h2 className="text-xl font-bold">{translate("about.mission")}</h2>
               <p className="text-muted-foreground">
-                At Blessed Threads Emporium, our mission is to provide authentic, high-quality religious items that support and enhance the spiritual journey of the faithful. We are committed to craftsmanship, authenticity, and reverence in all our products.
+                At Marcelino Global Trade we offer high-quality Christian religious articles to churches, stores, and homes to preserve the heritage of Christian craft and iconography. We promote ethical, handcrafted, and spritually inspired products with the help of women through skill development and home-based employment. We want to expand globally while staying rooted in service and integrity.
               </p>
             </div>
             
@@ -36,7 +36,7 @@ const AboutPage = () => {
             <div className="space-y-4 p-6 bg-card rounded-lg shadow-sm">
               <h2 className="text-xl font-bold">{translate("about.values")}</h2>
               <p className="text-muted-foreground">
-                Our core values include respect for sacred traditions, commitment to authentic representation of religious symbols, ethical sourcing of materials, and providing excellent service to our community of believers.
+              At Marcelino, we proudly employ women artisans who work from home, allowing them to contribute to the family income while maintaining their responsibilities. Through this, we not only produce spiritually valuable items but also help build stronger communities led by empowered women.
               </p>
             </div>
           </div>

@@ -6,14 +6,14 @@ export const products: Product[] = [
     id: 1,
     name: "Hand-Crafted Wooden Rosary",
     price: 29.99,
-    image: "https://images.unsplash.com/photo-1572911660752-c732cbc0e0ca?q=80&w=600&auto=format&fit=crop",
+    image: "https://res.cloudinary.com/drv5py5dk/image/upload/v1746526124/josef-stepanek-htKHFLa5phY-unsplash_m4b1k0.jpg",
     category: "Rosaries",
   },
   {
     id: 2,
     name: "Blessed Marian Icon",
     price: 89.99,
-    image: "https://images.unsplash.com/photo-1621777103797-913bc4d4f9cf?q=80&w=600&auto=format&fit=crop",
+    image: "https://res.cloudinary.com/drv5py5dk/image/upload/v1746527289/shannon-douglas-SdSXz9k_p7E-unsplash_zmayoo.jpg",
     category: "Icons",
   },
   {

@@ -49,9 +49,9 @@ const HomePage = () => {
               </div>
               <div className="aspect-video relative overflow-hidden rounded-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1587189872632-8cefc50ebf26?q=80&w=1000&auto=format&fit=crop" 
+                  src="https://res.cloudinary.com/drv5py5dk/image/upload/v1746525873/alessandro-bellone-rvJBpwEX-1Y-unsplash_zh1qbb.jpg" 
                   alt="Church interior"
-                  className="object-cover w-full h-full"
+                  className="object-cover object-top w-full h-full"
                 />
               </div>
             </div>
@@ -74,9 +74,9 @@ const HomePage = () => {
         <div className="container px-4 md:px-6">
           <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
             <div className="space-y-4">
-              <h3 className="text-lg font-medium">Blessed Threads</h3>
+              <h3 className="text-lg font-medium">Marcelino Global Trade Pvt. Ltd.</h3>
               <ul className="space-y-2 text-sm">
-                <li>© 2025 Blessed Threads Emporium.</li>
+                <li>© 2025 Marcelino Global Trade Pvt. Ltd.</li>
                 <li>All rights reserved.</li>
               </ul>
             </div>
