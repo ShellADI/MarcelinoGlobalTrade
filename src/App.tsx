@@ -10,16 +10,19 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "./hooks/use-language";
+import ScrollToTop from "./components/ScrollToTop"; // Import ScrollToTop
 
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
+   <QueryClientProvider client={queryClient}>
     <LanguageProvider>
       <TooltipProvider>
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          {/* Add ScrollToTop here */}
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
@@ -32,5 +35,4 @@ const App = () => (
     </LanguageProvider>
   </QueryClientProvider>
 );
-
 export default App;
