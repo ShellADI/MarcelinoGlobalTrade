@@ -27,7 +27,7 @@ export const products: Product[] = [
     id: 4,
     name: "Prayer Book Collection",
     price: 39.99,
-    image: "https://images.unsplash.com/photo-1531053270060-6643c9e70def?q=80&w=600&auto=format&fit=crop",
+    image: "https://res.cloudinary.com/drv5py5dk/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1747373758/mikel-mirjane-Ms6c7nNwQwM-unsplash_xsy5dk.jpg",
     category: "Books",
   },
   {

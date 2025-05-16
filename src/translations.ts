@@ -38,9 +38,15 @@ export const translations = {
     
     // About page
     "about.title": "About Us",
+
     "about.mission": "Our Mission",
+    "about.missionTxt":"At Marcelino Global Trade we offer high-quality Christian religious articles to churches, stores, and homes to preserve the heritage of Christian craft and iconography. We promote ethical, handcrafted, and spritually inspired products with the help of women through skill development and home-based employment. We want to expand globally while staying rooted in service and integrity.",
+    
     "about.story": "Our Story",
+    "about.storyTxt": "Founded in 2010 by a family of devoted Catholics,Marcelino Pvt. Ltd. began as a small workshop creating hand-crafted rosaries. Over the years, we've expanded our offerings while maintaining our commitment to quality and spiritual integrity.",
+    
     "about.values": "Our Values",
+    "about.valuesTxt": "At Marcelino, we proudly employ women artisans who work from home, allowing them to contribute to the family income while maintaining their responsibilities. Through this, we not only produce spiritually valuable items but also help build stronger communities led by empowered women.",
     
     // Contact page
     "contact.title": "Contact Us",
@@ -92,9 +98,15 @@ export const translations = {
     
     // About page
     "about.title": "Sobre Nosotros",
+
     "about.mission": "Nuestra Misión",
+    "about.missionTxt":"En Marcelino Global Trade, ofrecemos artículos religiosos cristianos de alta calidad a iglesias, tiendas y hogares para preservar el legado de la artesanía e iconografía cristianas. Promovemos productos éticos, artesanales y de inspiración espiritual con la ayuda de mujeres mediante el desarrollo de habilidades y el trabajo desde casa. Queremos expandirnos globalmente, manteniendo nuestros principios de servicio e integridad.",
+    
     "about.story": "Nuestra Historia",
+    "about.storyTxt": "Fundada en 2010 por una familia de católicos devotos, Marcelino Pvt. Ltd. comenzó como un pequeño taller de rosarios artesanales. Con los años, hemos ampliado nuestra oferta, manteniendo nuestro compromiso con la calidad y la integridad espiritual.",
+
     "about.values": "Nuestros Valores",
+    "about.valuesTxt": "En Marcelino, nos enorgullecemos de emplear a artesanas que trabajan desde casa, lo que les permite contribuir al ingreso familiar sin dejar de lado sus responsabilidades. De esta manera, no solo producimos artículos con valor espiritual, sino que también contribuimos a construir comunidades más fuertes lideradas por mujeres empoderadas.",
     
     // Contact page
     "contact.title": "Contáctenos",
@@ -146,9 +158,15 @@ export const translations = {
     
     // About page
     "about.title": "De Nobis",
+
     "about.mission": "Missio Nostra",
+    "about.missionTxt":"Apud Marcelino Global Trade, res religiosas Christianas summae qualitatis ecclesiis, tabernis, et domibus offerimus ut patrimonium artificii Christiani et iconographiae conservemus. Producta ethica, manu facta, et spiritualiter inspirata, mulieribus adiuvantibus per peritiam augendam et laborem domesticum promovemus. Globaliter expandere volumus, dum in servitio et integritate radicati manemus.",
+    
     "about.story": "Historia Nostra",
+    "about.storyTxt": "Anno MMX a familia Catholicorum devotorum condita, Marcelino Pvt. Ltd. initio parva officina rosaria manu facta creabat. Per annos, oblationes nostras amplificavimus, fideliter qualitatem et integritatem spiritualem servantes.",
+
     "about.values": "Valores Nostri",
+    "about.valuesTxt": "Apud Marcelinum, artifices feminas domi laborantes, cum superbia, conducimus, quo facto ad reditus familiares conferunt, officiis suis simul functi. Per hoc, non solum res spiritualiter pretiosas producimus, sed etiam communitates validiores, a mulieribus potentibus ductas, aedificare adiuvamus.        ",
     
     // Contact page
     "contact.title": "Contactus",

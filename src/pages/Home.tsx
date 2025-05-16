@@ -84,21 +84,21 @@ const HomePage = () => {
               <h3 className="text-lg font-medium">{translate("nav.home")}</h3>
               <ul className="space-y-2 text-sm">
                 <li><a href="#" className="hover:underline">{translate("home.featured")}</a></li>
-                <li><a href="#" className="hover:underline">{translate("products.title")}</a></li>
+                <li><a href="/products" className="hover:underline">{translate("products.title")}</a></li>
               </ul>
             </div>
             <div className="space-y-4">
               <h3 className="text-lg font-medium">{translate("nav.about")}</h3>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:underline">{translate("about.mission")}</a></li>
-                <li><a href="#" className="hover:underline">{translate("about.story")}</a></li>
+                <li><a href="/about" className="hover:underline">{translate("about.mission")}</a></li>
+                <li><a href="/about" className="hover:underline">{translate("about.story")}</a></li>
               </ul>
             </div>
             <div className="space-y-4">
               <h3 className="text-lg font-medium">{translate("nav.contact")}</h3>
               <ul className="space-y-2 text-sm">
                 <li><a href="#" className="hover:underline">info@blessedthreads.com</a></li>
-                <li><a href="#" className="hover:underline">(555) 123-4567</a></li>
+                <li><a href="tel:+919341424022" className="hover:underline">93414-24022</a></li>
               </ul>
             </div>
           </div>
