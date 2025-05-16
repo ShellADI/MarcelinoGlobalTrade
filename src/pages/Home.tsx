@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ProductGallery } from "@/components/ProductGallery";
 import { products } from "@/data/products";
 import { useLanguage } from "@/hooks/use-language";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const { translate } = useLanguage();
@@ -12,7 +13,7 @@ const HomePage = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      
+
       <main className="flex-1">
         {/* Hero Section */}
         <section className="py-12 md:py-24 bg-gradient-to-b from-primary/10 to-background">
@@ -34,7 +35,7 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-        
+
         {/* Welcome Section */}
         <section className="py-12 md:py-24">
           <div className="container px-4 md:px-6">
@@ -48,8 +49,8 @@ const HomePage = () => {
                 </p>
               </div>
               <div className="aspect-video relative overflow-hidden rounded-lg">
-                <img 
-                  src="https://res.cloudinary.com/drv5py5dk/image/upload/v1746525873/alessandro-bellone-rvJBpwEX-1Y-unsplash_zh1qbb.jpg" 
+                <img
+                  src="https://res.cloudinary.com/drv5py5dk/image/upload/v1746525873/alessandro-bellone-rvJBpwEX-1Y-unsplash_zh1qbb.jpg"
                   alt="Church interior"
                   className="object-cover object-top w-full h-full"
                 />
@@ -57,24 +58,26 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-        
+
         {/* Featured Products */}
         <section className="py-12 md:py-24 bg-muted/50">
           <div className="container px-4 md:px-6">
-            <ProductGallery 
-              products={featuredProducts} 
+            <ProductGallery
+              products={featuredProducts}
               title={translate("home.featured")}
             />
           </div>
         </section>
       </main>
-      
+
       {/* Footer */}
       <footer className="py-6 md:py-10 border-t">
         <div className="container px-4 md:px-6">
           <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
             <div className="space-y-4">
-              <h3 className="text-lg font-medium">Marcelino Global Trade Pvt. Ltd.</h3>
+              <h3 className="text-lg font-medium">
+                Marcelino Global Trade Pvt. Ltd.
+              </h3>
               <ul className="space-y-2 text-sm">
                 <li>© 2025 Marcelino Global Trade Pvt. Ltd.</li>
                 <li>All rights reserved.</li>
@@ -83,22 +86,49 @@ const HomePage = () => {
             <div className="space-y-4">
               <h3 className="text-lg font-medium">{translate("nav.home")}</h3>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:underline">{translate("home.featured")}</a></li>
-                <li><a href="/products" className="hover:underline">{translate("products.title")}</a></li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    {translate("home.featured")}
+                  </a>
+                </li>
+                <li>
+                  <Link to="/products" className="hover:underline">
+                    {translate("products.title")}
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className="space-y-4">
               <h3 className="text-lg font-medium">{translate("nav.about")}</h3>
               <ul className="space-y-2 text-sm">
-                <li><a href="/about" className="hover:underline">{translate("about.mission")}</a></li>
-                <li><a href="/about" className="hover:underline">{translate("about.story")}</a></li>
+                <li>
+                  <Link to="/about" className="hover:underline">
+                    {translate("about.mission")}
+                  </Link>
+                </li>
+      
+                <li>
+                  <Link to="/about" className="hover:underline">
+                    {translate("about.story")}
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className="space-y-4">
-              <h3 className="text-lg font-medium">{translate("nav.contact")}</h3>
+              <h3 className="text-lg font-medium">
+                {translate("nav.contact")}
+              </h3>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:underline">info@blessedthreads.com</a></li>
-                <li><a href="tel:+919341424022" className="hover:underline">93414-24022</a></li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    info@blessedthreads.com
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+919341424022" className="hover:underline">
+                    93414-24022
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

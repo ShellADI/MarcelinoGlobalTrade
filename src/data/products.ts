@@ -18,9 +18,9 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    name: "Olive Wood Crucifix",
+    name: "Wood Crucifix",
     price: 49.99,
-    image: "https://images.unsplash.com/photo-1545036554-a282e2fc4023?q=80&w=600&auto=format&fit=crop",
+    image: "https://res.cloudinary.com/drv5py5dk/image/upload/v1747384336/angelica-reyes--L22psgqip4-unsplash_grrwyy.jpg",
     category: "Crucifixes",
   },
   {
