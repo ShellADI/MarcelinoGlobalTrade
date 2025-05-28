@@ -43,10 +43,10 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <ThemeToggle />
           <LanguageToggle />
-          <Button variant="ghost" size="icon">
+          {/* <Button variant="ghost" size="icon">
             <ShoppingCart className="h-[1.2rem] w-[1.2rem]" />
             <span className="sr-only">Shopping cart</span>
-          </Button>
+          </Button> */}
           
           {/* Mobile Menu Button */}
           <Button variant="ghost" size="icon" className="md:hidden" onClick={toggleMenu}>

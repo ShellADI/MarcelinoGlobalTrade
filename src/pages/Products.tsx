@@ -53,7 +53,7 @@ const ProductsPage = () => {
       <footer className="py-6 border-t">
         <div className="container px-4 md:px-6 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 Blessed Threads Emporium. All rights reserved.
+            © 2025 Marcelino Global Trade Private Limited. All rights reserved.
           </p>
         </div>
       </footer>

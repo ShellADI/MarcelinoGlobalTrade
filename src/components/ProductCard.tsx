@@ -29,10 +29,10 @@ export function ProductCard({ product, viewMode }: ProductCardProps) {
         />
         {viewMode === "grid" && (
           <div className="absolute inset-0 bg-black/30 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-            <Button size="sm" variant="secondary" className="rounded-full">
+            {/* <Button size="sm" variant="secondary" className="rounded-full">
               <Eye className="h-4 w-4 mr-1" />
               <span className="text-xs">{translate("products.quickView")}</span>
-            </Button>
+            </Button> */}
           </div>
         )}
       </div>
@@ -45,10 +45,10 @@ export function ProductCard({ product, viewMode }: ProductCardProps) {
         
         <div className="flex items-center justify-between">
           <p className="font-semibold">${product.price.toFixed(2)}</p>
-          <Button size="sm" variant="outline">
+          {/* <Button size="sm" variant="outline">
             <ShoppingCart className="h-4 w-4 mr-1" />
             <span className="text-xs hidden md:inline">{translate("products.addToCart")}</span>
-          </Button>
+          </Button> */}
         </div>
       </div>
     </div>

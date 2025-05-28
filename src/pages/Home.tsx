@@ -1,10 +1,123 @@
-
 import { Navbar } from "@/components/Navbar";
-import { Button } from "@/components/ui/button";
 import { ProductGallery } from "@/components/ProductGallery";
 import { products } from "@/data/products";
 import { useLanguage } from "@/hooks/use-language";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+
+// Optimized Image Component with Progressive Loading
+const OptimizedImage = ({ 
+  src, 
+  alt, 
+  className,
+  priority = false 
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+  priority?: boolean;
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(priority); // If priority, load immediately
+
+  // Create optimized URLs
+  const getOptimizedUrl = (width: number, quality: string = 'auto') => {
+    return src.replace('/upload/', `/upload/f_auto,q_${quality},w_${width},c_fill,g_auto/`);
+  };
+
+  // Generate different sizes for responsive loading
+  const optimizedSrc = getOptimizedUrl(800);
+  const placeholderSrc = getOptimizedUrl(50, '10').replace('/upload/', '/upload/e_blur:300/');
+  
+  // Responsive srcSet
+  const srcSet = `
+    ${getOptimizedUrl(400)} 400w,
+    ${getOptimizedUrl(800)} 800w,
+    ${getOptimizedUrl(1200)} 1200w,
+    ${getOptimizedUrl(1600)} 1600w
+  `;
+
+  // Intersection Observer for lazy loading (skip if priority)
+  useEffect(() => {
+    if (priority) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { 
+        threshold: 0.1,
+        rootMargin: '100px' // Start loading 100px before entering viewport
+      }
+    );
+
+    const imgElement = document.getElementById(`img-${src.split('/').pop()}`);
+    if (imgElement) {
+      observer.observe(imgElement);
+    }
+
+    return () => observer.disconnect();
+  }, [src, priority]);
+
+  // Preload critical images
+  useEffect(() => {
+    if (priority) {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = optimizedSrc;
+      document.head.appendChild(link);
+
+      return () => {
+        document.head.removeChild(link);
+      };
+    }
+  }, [optimizedSrc, priority]);
+
+  return (
+    <div 
+      id={`img-${src.split('/').pop()}`}
+      className={`relative overflow-hidden ${className}`}
+    >
+      {/* Blur placeholder - always visible until main image loads */}
+      <div
+        className={`absolute inset-0 bg-cover bg-center transition-opacity duration-500 ${
+          isLoaded ? 'opacity-0' : 'opacity-100'
+        }`}
+        style={{ 
+          backgroundImage: `url(${placeholderSrc})`,
+          filter: 'blur(2px)',
+          transform: 'scale(1.1)' // Slightly scale to hide blur edges
+        }}
+      />
+
+      {/* Main optimized image */}
+      {(isInView || priority) && (
+        <img
+          src={optimizedSrc}
+          srcSet={srcSet}
+          sizes="(max-width: 768px) 400px, (max-width: 1024px) 800px, 1200px"
+          alt={alt}
+          onLoad={() => setIsLoaded(true)}
+          loading={priority ? "eager" : "lazy"}
+          className={`object-top w-full h-full object-cover transition-opacity duration-500 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+        />
+      )}
+
+      {/* Loading indicator (optional) */}
+      {!isLoaded && (isInView || priority) && (
+        <div className="absolute inset-0 flex items-center justify-center bg-black/10">
+          <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+        </div>
+      )}
+    </div>
+  );
+};
 
 const HomePage = () => {
   const { translate } = useLanguage();
@@ -28,9 +141,9 @@ const HomePage = () => {
                 </p>
               </div>
               <div className="space-x-4">
-                <Button className="min-w-[150px]">
+                {/* <Button className="min-w-[150px]">
                   {translate("home.shop")}
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>
@@ -49,10 +162,11 @@ const HomePage = () => {
                 </p>
               </div>
               <div className="aspect-video relative overflow-hidden rounded-lg">
-                <img
+                <OptimizedImage
                   src="https://res.cloudinary.com/drv5py5dk/image/upload/v1746525873/alessandro-bellone-rvJBpwEX-1Y-unsplash_zh1qbb.jpg"
                   alt="Church interior"
-                  className="object-cover object-top w-full h-full"
+                  className="w-full h-full"
+                  priority={true} // This image is above the fold, so load it immediately
                 />
               </div>
             </div>
@@ -121,12 +235,12 @@ const HomePage = () => {
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="#" className="hover:underline">
-                    info@blessedthreads.com
+                    pinaro@marcelinoglobaltrade.com
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+919341424022" className="hover:underline">
-                    93414-24022
+                  <a href="tel:+918169671899" className="hover:underline">
+                    81696-71899
                   </a>
                 </li>
               </ul>
