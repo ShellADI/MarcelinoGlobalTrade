@@ -36,5 +36,3 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
-
-this is after the changes in the readme file
