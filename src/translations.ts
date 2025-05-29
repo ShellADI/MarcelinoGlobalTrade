@@ -50,6 +50,7 @@ export const translations = {
     
     // Contact page
     "contact.title": "Contact Us",
+    "contact.information":"Contact Information",
     "contact.form": "Contact Form",
     "contact.name": "Name",
     "contact.email": "Email",
@@ -110,6 +111,7 @@ export const translations = {
     
     // Contact page
     "contact.title": "Contáctenos",
+    "contact.information":"Información de contacto",
     "contact.form": "Formulario de Contacto",
     "contact.name": "Nombre",
     "contact.email": "Correo Electrónico",
@@ -170,6 +172,7 @@ export const translations = {
     
     // Contact page
     "contact.title": "Contactus",
+    "contact.information":"Contactus Informationis",
     "contact.form": "Formula Contactus",
     "contact.name": "Nomen",
     "contact.email": "Litterae Electronicae",
