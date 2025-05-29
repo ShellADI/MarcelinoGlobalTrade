@@ -161,7 +161,7 @@ const ContactPage = () => {
 
                 <div className="space-y-2">
                   <h3 className="font-medium">{translate("contact.phone")}</h3>
-                  <p className="text-muted-foreground">+91 81696 71899</p>
+                  <p className="text-muted-foreground">+91 83340 93366</p>
                 </div>
 
                 <div className="space-y-2">

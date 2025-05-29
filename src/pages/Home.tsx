@@ -133,7 +133,7 @@ const HomePage = () => {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
+                <h1 className="text-2xl font-bold tracking-tighter sm:text-2xl md:text-4xl lg:text-5xl">
                   {translate("home.title")}
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
@@ -234,13 +234,13 @@ const HomePage = () => {
               </h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="mailto:pinaro@marcelinoglobaltrade.com" className="hover:underline">
                     pinaro@marcelinoglobaltrade.com
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+918169671899" className="hover:underline">
-                    81696-71899
+                  <a href="tel:+918334093366" className="hover:underline">
+                    83340-93366
                   </a>
                 </li>
               </ul>

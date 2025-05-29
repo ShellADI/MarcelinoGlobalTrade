@@ -8,7 +8,7 @@ export const translations = {
     "nav.contact": "Contact Us",
     
     // Home page
-    "home.title": "Marcelino Emporium",
+    "home.title": "Marcelino Global Trade Pvt. Limited",
     "home.subtitle": "Crafting Devotion Empowering Lives",
     "home.featured": "Featured Products",
     "home.welcome": "Welcome to our sacred collection",
@@ -69,7 +69,7 @@ export const translations = {
     "nav.contact": "Contacto",
     
     // Home page
-    "home.title": "Emporio Marcelino",
+    "home.title": "Marcelino Comercio Global S.A. de C.V.",
     "home.subtitle": "Creando devoción, empoderando vidas",
     "home.featured": "Productos Destacados",
     "home.welcome": "Bienvenido a nuestra colección sagrada",
@@ -130,7 +130,7 @@ export const translations = {
     "nav.contact": "Contactus",
     
     // Home page
-    "home.title": "Emporium Marcellini",
+    "home.title": "Marcelino Global Trade Societas Privata Limitata",
     "home.subtitle": "Devotionem Fabricando Vitas Potentes Reddens",
     "home.featured": "Merces Insignes",
     "home.welcome": "Salve ad nostram collectionem sacram",

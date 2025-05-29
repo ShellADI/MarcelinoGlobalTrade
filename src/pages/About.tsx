@@ -75,7 +75,7 @@ const AboutPage = () => {
                   />
                 </div>
                 <h3 className="font-bold">Swapna Pinaro</h3>
-                <p className="text-sm text-muted-foreground">Co-Director</p>
+                <p className="text-sm text-muted-foreground">Director</p>
               </div>
             </div>
           </section>
