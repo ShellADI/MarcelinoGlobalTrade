@@ -4,13 +4,14 @@ import { products } from "@/data/products";
 import { useLanguage } from "@/hooks/use-language";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { ReactTyped } from "react-typed";
 
 // Optimized Image Component with Progressive Loading
-const OptimizedImage = ({ 
-  src, 
-  alt, 
+const OptimizedImage = ({
+  src,
+  alt,
   className,
-  priority = false 
+  priority = false,
 }: {
   src: string;
   alt: string;
@@ -21,14 +22,20 @@ const OptimizedImage = ({
   const [isInView, setIsInView] = useState(priority); // If priority, load immediately
 
   // Create optimized URLs
-  const getOptimizedUrl = (width: number, quality: string = 'auto') => {
-    return src.replace('/upload/', `/upload/f_auto,q_${quality},w_${width},c_fill,g_auto/`);
+  const getOptimizedUrl = (width: number, quality: string = "auto") => {
+    return src.replace(
+      "/upload/",
+      `/upload/f_auto,q_${quality},w_${width},c_fill,g_auto/`
+    );
   };
 
   // Generate different sizes for responsive loading
   const optimizedSrc = getOptimizedUrl(800);
-  const placeholderSrc = getOptimizedUrl(50, '10').replace('/upload/', '/upload/e_blur:300/');
-  
+  const placeholderSrc = getOptimizedUrl(50, "10").replace(
+    "/upload/",
+    "/upload/e_blur:300/"
+  );
+
   // Responsive srcSet
   const srcSet = `
     ${getOptimizedUrl(400)} 400w,
@@ -48,13 +55,13 @@ const OptimizedImage = ({
           observer.disconnect();
         }
       },
-      { 
+      {
         threshold: 0.1,
-        rootMargin: '100px' // Start loading 100px before entering viewport
+        rootMargin: "100px", // Start loading 100px before entering viewport
       }
     );
 
-    const imgElement = document.getElementById(`img-${src.split('/').pop()}`);
+    const imgElement = document.getElementById(`img-${src.split("/").pop()}`);
     if (imgElement) {
       observer.observe(imgElement);
     }
@@ -65,9 +72,9 @@ const OptimizedImage = ({
   // Preload critical images
   useEffect(() => {
     if (priority) {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'image';
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
       link.href = optimizedSrc;
       document.head.appendChild(link);
 
@@ -78,19 +85,19 @@ const OptimizedImage = ({
   }, [optimizedSrc, priority]);
 
   return (
-    <div 
-      id={`img-${src.split('/').pop()}`}
+    <div
+      id={`img-${src.split("/").pop()}`}
       className={`relative overflow-hidden ${className}`}
     >
       {/* Blur placeholder - always visible until main image loads */}
       <div
         className={`absolute inset-0 bg-cover bg-center transition-opacity duration-500 ${
-          isLoaded ? 'opacity-0' : 'opacity-100'
+          isLoaded ? "opacity-0" : "opacity-100"
         }`}
-        style={{ 
+        style={{
           backgroundImage: `url(${placeholderSrc})`,
-          filter: 'blur(2px)',
-          transform: 'scale(1.1)' // Slightly scale to hide blur edges
+          filter: "blur(2px)",
+          transform: "scale(1.1)", // Slightly scale to hide blur edges
         }}
       />
 
@@ -104,7 +111,7 @@ const OptimizedImage = ({
           onLoad={() => setIsLoaded(true)}
           loading={priority ? "eager" : "lazy"}
           className={`object-top w-full h-full object-cover transition-opacity duration-500 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
+            isLoaded ? "opacity-100" : "opacity-0"
           }`}
         />
       )}
@@ -134,7 +141,12 @@ const HomePage = () => {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-2xl font-bold tracking-tighter sm:text-2xl md:text-4xl lg:text-5xl">
-                  {translate("home.title")}
+                  <ReactTyped
+                    strings={[translate("home.title")]}
+                    typeSpeed={50}
+                    showCursor={true}
+                    cursorChar="|"
+                  />
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
                   {translate("home.subtitle")}
@@ -220,7 +232,7 @@ const HomePage = () => {
                     {translate("about.mission")}
                   </Link>
                 </li>
-      
+
                 <li>
                   <Link to="/about" className="hover:underline">
                     {translate("about.story")}
@@ -234,7 +246,10 @@ const HomePage = () => {
               </h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="mailto:pinaro@marcelinoglobaltrade.com" className="hover:underline">
+                  <a
+                    href="mailto:pinaro@marcelinoglobaltrade.com"
+                    className="hover:underline"
+                  >
                     pinaro@marcelinoglobaltrade.com
                   </a>
                 </li>
