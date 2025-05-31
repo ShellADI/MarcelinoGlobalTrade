@@ -12,10 +12,17 @@ const AboutPage = () => {
       <main className="flex-1 py-8">
         <div className="container px-4 md:px-6">
           <h1 className="text-3xl font-bold mb-8">
-            {translate("about.title")}
+            {translate("about.title")}          
           </h1>
-          
+          <p className="text-muted-foreground">{translate("about.aboutTxt")}</p>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {/* Moto */}
+            <div className="space-y-4 p-6 bg-card rounded-lg shadow-sm">
+              <h2 className="text-xl font-bold">{translate("about.moto")}</h2>
+              <p className="text-muted-foreground font-bold">{translate("about.motoTxt1")}</p>
+              <p className="text-muted-foreground">{translate("about.motoTxt2")}</p>
+            </div>
+            
             {/* Mission */}
             <div className="space-y-4 p-6 bg-card rounded-lg shadow-sm">
               <h2 className="text-xl font-bold">{translate("about.mission")}</h2>
@@ -74,7 +81,7 @@ const AboutPage = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="font-bold">Swapna Pinaro</h3>
+                <h3 className="font-bold">Swapna Surojit Pinaro</h3>
                 <p className="text-sm text-muted-foreground">Director</p>
               </div>
             </div>

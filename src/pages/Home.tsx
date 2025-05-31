@@ -166,11 +166,14 @@ const HomePage = () => {
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-2xl md:text-3xl lg:text-4xl">
                   {translate("home.welcome")}
                 </h2>
                 <p className="text-gray-500 dark:text-gray-400">
-                  {translate("home.description")}
+                  {translate("home.description1")}
+                </p>
+                <p className="text-gray-500 dark:text-gray-400">
+                  {translate("home.description2")}
                 </p>
               </div>
               <div className="aspect-video relative overflow-hidden rounded-lg">
