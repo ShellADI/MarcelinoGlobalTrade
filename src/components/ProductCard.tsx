@@ -44,7 +44,7 @@ export function ProductCard({ product, viewMode }: ProductCardProps) {
         </div>
         
         <div className="flex items-center justify-between">
-          <p className="font-semibold">${product.price.toFixed(2)}</p>
+          {/* <p className="font-semibold">${product.price.toFixed(2)}</p> */}
           {/* <Button size="sm" variant="outline">
             <ShoppingCart className="h-4 w-4 mr-1" />
             <span className="text-xs hidden md:inline">{translate("products.addToCart")}</span>
